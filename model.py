@@ -204,7 +204,7 @@ class Llama(nn.Module):
         # share the unembedding parameters with the embedding parameters
         self.token_embeddings.weight = self.output.weight
 
-        freqs_cos, freqs_sin = precompute_freqs_cis(self.dim // self.params.n_head, self.params.max_seq_len)
+        freqs_cos, freqs_sin = precompute_freqs_cis(self.dim // self.params.n_heads, self.params.max_seq_len)
         self.register_buffer('freqs_cos',freqs_cos)
         self.register_buffer('freqs_sin',freqs_sin)
 
