@@ -116,7 +116,7 @@ class Attention(nn.Module):
     def __init__(self, args: ModelArgs):
         super(Attention, self).__init__()
         self.n_group = args.n_group
-        self.n_head = args.n_head
+        self.n_head = args.n_heads
         self.head_dim = args.dim // self.n_head
         self.kv_head = self.n_head // self.n_group
         self.wq = nn.Linear(args.dim, self.head_dim * self.n_head, bias=False)
