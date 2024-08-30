@@ -1,5 +1,6 @@
 # Author: Jserw
 # Start: 2024/8/26
+# Finish: 2024/8/31
 
 import math
 import struct
@@ -20,7 +21,7 @@ DATA_CACHE_DIR = 'data'
 class ModelArgs:
     dim: int = 4096
     n_layers: int = 6
-    n_head: int = 6
+    n_heads: int = 6
     n_group: Optional[int] = 3
     vocab_size: int = 4096
     hidden_dim: Optional[int] = None
